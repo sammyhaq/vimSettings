@@ -1,0 +1,74 @@
+"=========================================
+" VUNDLE SETUP 
+"=========================================
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
+
+
+Plugin 'VundleVim/Vundle.vim'                      " let Vundle manage Vundle, required
+
+Plugin 'w0rp/ale'                                  " Linter.
+Plugin 'scrooloose/nerdtree'                       " Tree view for a bunch of stuff. 
+Plugin 'terryma/vim-multiple-cursors'              " Sublime text-esque multicursor.
+Plugin 'airblade/vim-gitgutter'                    " Shows git diff in gutter.
+Plugin 'fcpg/vim-fahrenheit'                       " fahrenheit color scheme.
+Plugin 'vim-airline/vim-airline'                   " Tab and bottom tray add-on.
+Plugin 'vim-airline/vim-airline-themes'            " vim-airline themes.
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+
+
+"=========================================
+" UI STUFF 
+"=========================================
+
+" enable line number column.
+set number
+set numberwidth=3
+
+" enabling the tab ui improvement.
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" automatically open NERDTree when starting:
+autocmd vimenter * NERDTree
+
+" enabling syntax highlighting.
+syntax on
+
+" Showing partial commands from earlier.
+set showcmd
+set cmdheight=2
+
+" search result improvements and such
+set hlsearch
+set ignorecase
+set smartcase
+
+" misc. improvements
+set ruler 
+set visualbell
+
+" allows use of mouse for vim. Enable when necessary, but try to get better
+" with keyboard only!
+"set mouse = a
+
+" enabling fahrenheit theme.
+colorscheme fahrenheit
