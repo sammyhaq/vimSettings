@@ -72,3 +72,11 @@ set visualbell
 
 " enabling fahrenheit theme.
 colorscheme fahrenheit
+
+
+"=========================================
+" SHORTCUT COMMANDS
+"=========================================
+
+" toggles the NerdTree. Bounded to ctrl+t.
+map <C-t> :NERDTreeToggle<CR>
