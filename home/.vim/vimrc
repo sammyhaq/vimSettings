@@ -43,6 +43,9 @@ filetype plugin indent on    " required
 set number
 set numberwidth=3
 
+" ensures that lines are broken when reaching end of line
+set textwidth=80
+
 " enabling the tab ui improvement.
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -80,3 +83,5 @@ colorscheme fahrenheit
 
 " toggles the NerdTree. Bounded to ctrl+t.
 map <C-t> :NERDTreeToggle<CR>
+
+
